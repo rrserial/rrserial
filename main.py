@@ -51,6 +51,7 @@ def handle_message(update: Update, context):
 
     else:
         print("Message does not match any known format.")
+        update.message.reply_text("Message does not match the trade Format")
         return
 
     # Define actionType based on order_type
