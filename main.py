@@ -90,6 +90,7 @@ def handle_message(update: Update, context):
         print(response)
         print("Trading order created successfully.")
         print("Response:", response.json())
+        update.message.reply_text(response)
         update.message.reply_text("Trade successful! 🚀")
     else:
         print("Failed to create trading order. Status code:", response.status_code)
